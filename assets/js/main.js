@@ -1,6 +1,5 @@
 const ausgabeVorne = document.getElementById('ausgabeVorne')
 const ausgabeHinten = document.getElementById('ausgabeHinten')
-const hinweis = document.getElementById('warnhinweis')
 
 function schneiden(){
     const text = document.forms[0].txtInput.value
@@ -18,10 +17,10 @@ function schneiden(){
     console.log('first', index, text, seperator)
 
     if (index === -1){ // index gibt aus, dass es das Wort nicht gibt (-1 steht für 'nicht vorhanden')
-        hinweis.innerHTML = ('Upsi pupsi...Wort nicht gefunden.')
-        console.log(index)
+        ausgabeVorne.innerHTML = ('Upsi pupsi...Wort nicht gefunden.')
+       /*  console.log(index) */
         ausgabeHinten.innerHTML = text
-        console.log(ausgabeHinten)
+        /* console.log(ausgabeHinten) */
     }else{
         switch(trennen){
             case 'davor': // index gebinnt ab '0'
